@@ -1,0 +1,3 @@
+vaultwarden.keaton.cloud {
+    reverse_proxy vaultwarden:80
+}
