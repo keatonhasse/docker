@@ -7,9 +7,10 @@ services:
     hostname: bitwarden
     restart: unless-stopped
     environment:
-      - DOMAIN=${DOMAIN}
-      - ADMIN_TOKEN=${ADMIN_TOKEN}
-      - SIGNUPS_ALLOWED=${SIGNUPS_ALLOWED}
+      - WEBSOCKET_ENABLED=true
+      - WEB_VAULT_ENABLED=true
+      - SIGNUPS_ALLOWED=false
+      - ADMIN_TOKEN=123456789
     volumes:
       - ./data:/data
 
