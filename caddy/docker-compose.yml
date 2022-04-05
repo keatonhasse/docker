@@ -6,7 +6,7 @@ services:
     container_name: caddy
     restart: unless-stopped
     environment:
-      - CLOUDFLARE_API_TOKEN=$TOKEN
+      - CLOUDFLARE_API_TOKEN=$CLOUDFLARE_API_TOKEN
     ports:
       - 80:80
       - 443:443
