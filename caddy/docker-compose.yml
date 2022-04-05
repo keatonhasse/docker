@@ -6,6 +6,7 @@ services:
     container_name: caddy
     restart: unless-stopped
     environment:
+      - $DOMAIN
       - ACME_EMAIL=$ACME_EMAIL
       - CLOUDFLARE_API_TOKEN=$CLOUDFLARE_API_TOKEN
       - ACME_AGREE=true
