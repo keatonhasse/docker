@@ -6,7 +6,10 @@ services:
     container_name: bitwarden
     hostname: bitwarden
     restart: unless-stopped
-    env_file: .env
+    environment:
+      - DOMAIN=${DOMAIN}
+      - ADMIN_TOKEN=${ADMIN_TOKEN}
+      - SIGNUPS_ALLOWED=${SIGNUPS_ALLOWED}
     volumes:
       - ./data:/data
 
