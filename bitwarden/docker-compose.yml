@@ -6,11 +6,7 @@ services:
     container_name: bitwarden
     hostname: bitwarden
     restart: unless-stopped
-    environment:
-      - WEBSOCKET_ENABLED=true
-      - WEB_VAULT_ENABLED=true
-      - SIGNUPS_ALLOWED=false
-      - ADMIN_TOKEN=123456789
+    env_file: .env
     volumes:
       - ./data:/data
 
