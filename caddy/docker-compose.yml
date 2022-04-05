@@ -6,7 +6,9 @@ services:
     container_name: caddy
     restart: unless-stopped
     environment:
+      - ACME_EMAIL=$ACME_EMAIL
       - CLOUDFLARE_API_TOKEN=$CLOUDFLARE_API_TOKEN
+      - ACME_AGREE=true
     ports:
       - 80:80
       - 443:443
